@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hermes | Serviços</title>
+    <meta name="description"
+        content="Conheça nossos serviços de marketing digital, tráfego pago, funil de vendas e identidade visual.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Light Minimalist Services Hero */
+        .services-hero {
+            padding-top: 150px;
+            padding-bottom: 5rem;
+            text-align: center;
+            background-color: var(--bg-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .services-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100vw;
+            height: 100px;
+            background: var(--white);
+            border-radius: 50% 50% 0 0;
+            z-index: 0;
+        }
+
+        .services-hero h1 {
+            font-size: 3.8rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+            color: var(--primary);
+        }
+
+        .services-hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            color: var(--text-body);
+        }
+
+        .services-hero .badge {
+            background-color: rgba(244, 193, 108, 0.2);
+            color: var(--primary);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Light Minimalist Services List */
+        .services-list {
+            padding: 4rem 0 8rem 0;
+            background-color: var(--white);
+            position: relative;
+        }
+
+        .services-grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .service-light-card {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 3rem;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-light-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent);
+            background: var(--white);
+        }
+
+        .service-icon-box {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2rem;
+            color: var(--white);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .service-light-card:nth-child(even) .service-icon-box {
+            background: var(--accent);
+            color: var(--primary);
+        }
+
+        .service-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.2rem;
+            color: var(--primary);
+        }
+
+        .service-content p {
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+            color: var(--text-body);
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .service-features {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: auto;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            padding-top: 2rem;
+        }
+
+        .service-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        .service-features li span {
+            color: var(--accent);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            font-weight: 800;
+        }
+
+        @media (max-width: 992px) {
+            .services-grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Ícone Hermes" class="logo-icon" onerror="this.style.display='none'">
+                <span class="logo-text">HERMES</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#sobre">Quem Somos</a>
+                <a href="servicos.html" class="active">Serviços</a>
+                <a href="index.html#planos">Planos</a>
+                <a href="index.html#contato">Contato</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="menu-toggle" aria-label="Abrir menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="services-hero">
+            <div class="container">
+                <div class="badge fade-in">Nossos Serviços</div>
+                <h1 class="fade-in" style="transition-delay: 0.1s;">Acelerando o <span class="text-highlight">Seu
+                        Negócio</span></h1>
+                <p class="fade-in" style="transition-delay: 0.2s;">Descubra como nossa expertise pode transformar a sua
+                    presença digital e escalar as suas vendas toda semana.</p>
+            </div>
+        </section>
+
+        <section class="services-list">
+            <div class="container services-grid-container fade-in">
+
+                <!-- Service 1 -->
+                <div class="service-light-card">
+                    <div class="service-content">
+                        <div class="service-icon-box">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                                <polyline points="17 6 23 6 23 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Tráfego Pago Especializado</h3>
+                        <p>Anúncios altamente segmentados projetados para colocar sua empresa diante das pessoas certas,
+                            na hora certa. Maximizamos seu Retorno Sobre o Investimento (ROI) em plataformas como
+                            Google, Meta (Facebook e Instagram) e LinkedIn.</p>
+                        <ul class="service-features">
+                            <li><span>✓</span> Chega de depender só de indicação para fechar clientes</li>
+                            <li><span>✓</span> Anúncios para quem já demonstrou interesse no seu serviço</li>
+                            <li><span>✓</span> Nossos clientes fecham em média 3x mais clientes novos por mês com
+                                tráfego pago.</li>
+                            <li><span>✓</span> Gestão de Campanhas de Alta Conversão</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-light-card">
+                    <div class="service-content">
+                        <div class="service-icon-box">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3>Identidade Visual</h3>
+                        <p>O design é a primeira impressão da sua marca. Criamos identidades visuais sofisticadas que
+                            transmitem autoridade, confiança e conectam emocionalmente com o seu público-alvo,
+                            diferenciando sua empresa em qualquer mercado.</p>
+                        <ul class="service-features">
+                            <li><span>✓</span> Logotipos Exclusivos e Memoráveis</li>
+                            <li><span>✓</span> Cores, Fontes e Estilos Personalizados Para Sua Marca</li>
+                            <li><span>✓</span> Mockups e Midias Personalizadas Para Redes Sociais</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-light-card">
+                    <div class="service-content">
+                        <div class="service-icon-box">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <circle cx="12" cy="12" r="6"></circle>
+                                <circle cx="12" cy="12" r="2"></circle>
+                            </svg>
+                        </div>
+                        <h3>Funis de Vendas Automatizados</h3>
+                        <p>Muitas empresas perdem clientes por falta de um processo claro de vendas. Criamos funis que
+                            conduzem o seu cliente do primeiro contato até o fechamento, de mapeada e validada.</p>
+                        <ul class="service-features">
+                            <li><span>✓</span> Mapeamento de Jornada de Compra</li>
+                            <li><span>✓</span> Automação de E-mail Marketing</li>
+                            <li><span>✓</span> Estratégia de Upsell e Downsell</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-light-card">
+                    <div class="service-content">
+                        <div class="service-icon-box">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <h3>Site Profissional</h3>
+                        <p>Muitos autônomos perdem clientes antes mesmo de falar com eles por não ter um site que
+                            transmita credibilidade. Criamos sites que passam profissionalismo, geram confiança e
+                            transformam visitantes em clientes.</p>
+                        <ul class="service-features">
+                            <li><span>✓</span> Chega de perder clientes por parecer pequeno demais</li>
+                            <li><span>✓</span> Mostre o seu trabalho de forma profissional e organizada</li>
+                            <li><span>✓</span> Pare de depender só do Instagram para ser encontrado</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="pricing bg-light" style="padding: 4rem 0;">
+            <div class="container center fade-in">
+                <h2 class="section-title">Pronto para captar novos <span class="text-highlight">clientes toda
+                        semana</span>?</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem;">Descubra como a hermes vai captar novos clientes para
+                    sua empresa !</p>
+                <a href="index.html#contato" class="btn btn-primary"
+                    style="font-size: 1.1rem; padding: 1rem 3rem;">Captar Novos Clientes Agora</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo-wrapper">
+                    <img src="logo.png" alt="Ícone Hermes" class="footer-logo-icon" onerror="this.style.display='none'">
+                    <span class="logo-text">HERMES</span>
+                </div>
+                <p>Construímos sua presença online e a transformamos em captação de clientes.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navegação rápida</h4>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#sobre">Quem Somos</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="index.html#planos">Nossos Planos</a></li>
+                    <li><a href="index.html#contato">Fale Conosco</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Redes Sociais</h4>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/hermes.company_/" target="_blank" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61587692564961&locale=pt_BR" target="_blank"
+                        aria-label="Facebook">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Hermes Marketing Digital. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
