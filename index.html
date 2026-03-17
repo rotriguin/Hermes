@@ -337,33 +337,32 @@
                 </div>
 
                 <div class="contact-form-wrapper fade-in" style="transition-delay: 0.2s;">
-                    <form class="contact-form" action="https://formsubmit.co/contato@hermescompany.marketing"
-                        method="POST">
-                        <!-- Redirecionamento e Configurações Opcionais -->
-                        <input type="hidden" name="_next" value="https://hermescompany.marketing/obrigado.html">
-                        <!-- O assunto foi removido propositalmente para que os emails não sejam agrupados em uma única conversa pelo Gmail (threading) -->
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_template" value="table">
+                    <form action="https://formsubmit.co/contato@hermescompany.marketing" method="POST"
+                        class="contact-form">
+                        <!-- Nome -->
+                        <input type="text" name="name" placeholder="Nome Completo" required>
 
-                        <div class="form-group">
-                            <label for="name">Nome Completo</label>
-                            <input type="text" id="name" name="nome" placeholder="Seu nome" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">E-mail mais Usado</label>
-                            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Número</label>
-                            <input type="tel" id="phone" name="telefone" placeholder="(00) 00000-0000"
-                                oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="company">Escritório</label>
-                            <input type="text" id="company" name="empresa" placeholder="Nome do seu escritório">
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block btn-pulse">Captar Novos Clientes
-                            Agora</button>
+                        <!-- Email -->
+                        <input type="email" name="email" placeholder="E-mail mais Usado" required>
+
+                        <!-- Telefone -->
+                        <input type="text" name="phone" placeholder="Número" required>
+
+                        <!-- Escritório -->
+                        <input type="text" name="office" placeholder="Escritório" required>
+
+                        <!-- Configurações FormSubmit -->
+                        <input type="hidden" name="_subject" value="Novo lead Hermes">
+
+                        <!-- MUITO IMPORTANTE: URL completa do GitHub Pages -->
+                        <input type="hidden" name="_next" value="https://rotriguin.github.io/Hermes/obrigado.html">
+
+                        <!-- Desativa captcha (opcional) -->
+                        <input type="hidden" name="_captcha" value="false">
+
+                        <button type="submit">
+                            Captar Novos Clientes Agora
+                        </button>
                     </form>
                 </div>
 
