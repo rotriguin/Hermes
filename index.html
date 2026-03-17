@@ -337,10 +337,14 @@
                 </div>
 
                 <div class="contact-form-wrapper fade-in" style="transition-delay: 0.2s;">
-                    <form class="contact-form" action="https://formsubmit.co/contato@hermescompany.marketing"
-                        method="POST">
+                    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+                        <input type="hidden" name="access_key" value="88d2a02a-43d4-4c13-a817-6f924c389709">
+
                         <!-- Redirecionamento e Configurações Opcionais -->
-                        <input type="hidden" name="_next" value="https://hermescompany.marketing/obrigado.html">
+                        <input type="hidden" name="redirect" value="https://hermescompany.marketing/obrigado.html">
+                        <input type="hidden" name="subject" value="Novo Lead - Hermes Marketing">
+                        <input type="hidden" name="from_name" value="Site Hermes">
                         <div class="form-group">
                             <label for="name">Nome Completo</label>
                             <input type="text" id="name" name="nome" placeholder="Seu nome" required>
